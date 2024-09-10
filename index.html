@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook S1-DZ02</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { width: 95%; margin: auto; }
+        .dropdown { margin-bottom: 20px; }
+        .time-title { font-size: 1.2em; font-weight: bold; }
+        .activity { margin-bottom: 30px; }
+        .banner { background-color: #4CAF50; color: white; padding: 10px; cursor: pointer; }
+        .title { font-weight: bold; }
+        .subtitle { font-style: italic; }
+        .content { display: none; padding: 10px; border: 1px solid #ddd; }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playbook S1-DZ02</h1>
+        
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateContent()">
+                <option value="50">50 minutos</option>
+                <option value="45">45 minutos</option>
+                <option value="40">40 minutos</option>
+            </select>
+        </div>
+        
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+        
+        <div id="activity-0" class="activity">
+            <div class="banner" onclick="toggleContent('revision_mision')">
+                <div class="title">📚 Actividad 0: Revisión Misión (1 paso) ⏰ Tiempo: N/A</div>
+                <div class="subtitle">Revisar la misión del día.</div>
+            </div>
+            <div id="revision_mision" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (N/A):</strong> Revisar diapositiva 1 para poder preparar la misión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="activity-1" class="activity">
+            <div class="banner" onclick="toggleContent('saludo_ritual')">
+                <div class="title">🎉 Actividad 1: Saludo y Ritual Gnius Club (4 pasos) ⏰ Tiempo: 2.5 minutos</div>
+                <div class="subtitle">Dar la bienvenida a los Genios y preparar el ambiente para el aprendizaje.</div>
+            </div>
+            <div id="saludo_ritual" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (0.5 minutos):</strong> Revisar Diapositiva 2 "Gnius Club: Proteger nuestra privacidad en línea".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Hola, Genios! Hoy vamos a embarcarnos en una misión crucial: aprender a proteger nuestra privacidad en línea, un tema esencial en el mundo digital de hoy. ¿Listos para descubrir cómo controlar quién tiene acceso a nuestra información?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (1 minuto):</strong> Revisar Diapositiva 3 " ¿Cómo estás?".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Hoy vamos a hacer un check-in rápido. Quiero que piensen en una palabra que describa cómo se sienten en este momento y la compartan con su compañero de al lado. Puede ser algo como 'motivado', 'estresado' o 'curioso'. Después de compartir, levanten la mano si se sienten listos para comenzar nuestra misión de hoy.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (0.5 minutos):</strong> Revisar Diapositiva 4 "Gracias por asistir".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Vamos a tomar un momento para agradecer estar aquí juntos, listos para aprender y proteger nuestra privacidad. Juntemos las manos y digamos 'Gracias'.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 4 (0.5 minutos):</strong> Revisar Diapositiva 5 "Objetivos de la Misión".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Hoy, nuestro objetivo es entender cómo podemos controlar quién tiene acceso a nuestra información personal, explorar las configuraciones de privacidad, y aprender a ajustar los permisos en nuestras aplicaciones. ¡Vamos a proteger nuestra información como verdaderos expertos!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="activity-2" class="activity">
+            <div class="banner" onclick="toggleContent('innovacion_dia')">
+                <div class="title">💡 Actividad 2: Innovación del Día (3 pasos) ⏰ Tiempo: 2.5 minutos</div>
+                <div class="subtitle">Introducir a los estudiantes a un concepto innovador relacionado con el tema.</div>
+            </div>
+            <div id="innovacion_dia" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (0.5 minutos):</strong> Revisar Diapositiva 6 "Innovación del Día".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Hoy vamos a explorar una innovación que está cambiando cómo protegemos nuestra información personal en línea. Vamos a hablar sobre la tecnología de autenticación multifactor (MFA) y cómo nos ayuda a mantener nuestras cuentas seguras.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (1 minuto):</strong> Revisar Diapositiva 7 "Innovación del día: vídeo".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> La autenticación multifactor (MFA) es una tecnología que agrega una capa adicional de seguridad a nuestras cuentas. Además de la contraseña, requiere una segunda forma de verificación, como un código enviado a tu teléfono. Esto asegura que, incluso si alguien obtiene tu contraseña, no pueda acceder a tus cuentas sin ese segundo factor. Vamos a ver cómo funciona y por qué es esencial en el mundo digital de hoy.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (1 minuto):</strong> Revisar Diapositiva 8 "Innovación del día".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Imaginen que están protegiendo su casa. La contraseña es como la puerta principal con cerradura. MFA es como tener una segunda cerradura en la puerta o una alarma. Si alguien intenta entrar sin permiso, esa segunda capa de seguridad lo detiene. En el mundo digital, MFA nos protege de personas que intentan acceder a nuestras cuentas sin permiso. ¿Alguien aquí ya usa MFA en sus cuentas?</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="activity-3" class="activity">
+            <div class="banner" onclick="toggleContent('brain_gym')">
+                <div class="title">🧠 Actividad 3: Brain Gym (5 pasos) ⏰ Tiempo: 25.5 minutos</div>
+                <div class="subtitle">Introducir el Brain Gym y preparar a los estudiantes para aprender sobre la protección de información personal.</div>
+            </div>
+            <div id="brain_gym" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1.5 minutos):</strong> Revisar Diapositiva 9 "Brain Gym: Protección de la Información y Permisos".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Genios, hoy vamos a hacer un pequeño ejercicio mental para activar nuestras mentes. Sabemos que nuestra información personal es como un tesoro muy valioso, pero no solo se trata de lo que compartimos. A veces, las aplicaciones en nuestros dispositivos tienen permisos predeterminados que pueden exponer nuestra información sin que nos demos cuenta. ¡Así que vamos a empezar!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (1.5 minutos):</strong> Revisar Diapositiva 10 "Accediendo a la plataforma".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora sí, abran su navegador y vayan al sitio que aparece en pantalla para acceder a los recursos de la clase. Vamos a realizar la Lección 2: Quest, Challenge y Misión. Para realizar esta actividad tendremos un tiempo de 20 minutos.</td>
+                    </tr>
+                    <tr id="brain-gym-step3">
+                        <td><strong>PASO 3 (20 minutos):</strong> Revisar Diapositiva 11: "Realizar: Quest, Challenge y Misión" TIMER de 20 minutos</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 4 (1.5 minutos):</strong> Revisar Diapositiva 12: "Reflexión".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Hemos aprendido que, además de cuidar la información que compartimos, es crucial revisar los permisos que otorgamos en nuestras aplicaciones. No todos los permisos son necesarios, y debemos ajustar estos según nuestra edad y el uso que le damos a las aplicaciones. ¡La seguridad en internet depende de nuestras decisiones!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 5 (1 minuto):</strong> Revisar diapositiva 13: Objetivos de la misión alcanzados"</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="activity-4" class="activity">
+            <div class="banner" onclick="toggleContent('state_change')">
+                <div class="title">🔄 Actividad 4: State Change (4 pasos) ⏰ Tiempo: 2 minutos</div>
+                <div class="subtitle">Relajar y desestresar a los estudiantes para prepararlos para el siguiente segmento de la clase.</div>
+            </div>
+            <div id="state_change" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (0.5 minutos):</strong> Revisar diapositiva 14 "Brain vitamin"</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (0.5 minutos):</strong> Revisar Diapositiva 15 "Movimiento y energía".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Genios, vamos a tomar un pequeño descanso para relajarnos y recargar energías. Hoy quiero que imaginen que son como árboles. De pie, estiren los brazos hacia arriba como si fueran ramas creciendo hacia el sol. Ahora, lentamente muevan sus ramas hacia los lados, como si el viento las estuviera balanceando. Inhalen profundamente mientras crecen hacia el cielo y exhalen al moverse con el viento. Vamos a mantener este movimiento por unos segundos.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (0.5 minutos):</strong> Revisar Diapositiva 16 " Balanceo de árbol".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora que ya tenemos nuestras ramas extendidas, imaginen que una suave brisa comienza a mover todo el árbol. Empiecen a balancear su cuerpo suavemente, de un lado a otro, sin perder el equilibrio. Este movimiento nos ayudará a liberar cualquier tensión y estar listos para continuar aprendiendo.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 4 (0.5 minutos):</strong> Listos para continuar</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Muy bien, ahora imaginen que el viento se ha calmado y el árbol regresa a su estado firme. Bajen lentamente los brazos y sacudan suavemente las manos para liberar cualquier tensión restante. Inhalen profundamente una vez más, y ahora estamos listos para continuar nuestra misión.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<div id="activity-5" class="activity">
+            <div class="banner" onclick="toggleContent('team_gnius')">
+                <div class="title">👥 Actividad 5: Team Gnius (4 pasos) ⏰ Tiempo: 3.5 minutos</div>
+                <div class="subtitle">Formar equipos y prepararse para el desafío.</div>
+            </div>
+            <div id="team_gnius" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (0.5 minutos):</strong> Revisar diapositiva 17 :Team Gnius</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (1 minuto):</strong> Revisar Diapositiva 18 "Formación de Equipos".TIMER 1 minuto</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora vamos a formar equipos. Cada grupo tendrá entre 4 y 5 personas. Trabajarán juntos para analizar los permisos de aplicaciones que se les asignen y decidir cuáles deben otorgar o restringir según el perfil de usuario que les toque. Tienen 1 minuto, ¡Vamos, encuentren a sus compañeros!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (1 minuto):</strong> Revisar Diapositiva 19, 20 y 21 "Asignación de Perfiles".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Cada equipo recibirá un perfil de usuario: puede ser un adolescente que usa muchas redes sociales, un adulto que trabaja con productividad o un adulto mayor que usa pocas aplicaciones. Les daremos una lista de aplicaciones para que discutan qué permisos deberían otorgar y cuáles restringir.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 4 (1 minuto):</strong> Revisar diapositiva 22: "Recoger de material"</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="activity-6" class="activity">
+            <div class="banner" onclick="toggleContent('challenge')">
+                <div class="title">⚔️ Actividad 6: Challenge (4 pasos) ⏰ Tiempo: 10 minutos</div>
+                <div class="subtitle">Realizar el desafío principal de la clase.</div>
+            </div>
+            <div id="challenge" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Revisar Diapositiva 23 "Challenge".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Genios, ¡ha llegado la hora del desafío! Hoy cada equipo debe tomar las aplicaciones asignadas y configurar los permisos correctamente según el perfil de usuario que les fue asignado. Piensen en cómo proteger la privacidad de cada perfil, limitando los permisos que no son necesarios.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (1 minuto):</strong> Revisar Diapositiva 24 "Configuración de permisos".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Recuerden, deben revisar cada aplicación y decidir qué permisos son necesarios y cuáles podrían ser peligrosos. Por ejemplo, ¿una aplicación de redes sociales realmente necesita acceso a la ubicación? ¿O una aplicación de fotos necesita acceso al micrófono?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (5 minutos):</strong> Revisar Diapositiva 25 "Configuración de permisos:Timer de 5 min".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Tienen 5 minutos para revisar las aplicaciones y configurar los permisos. ¡Asegúrense de pensar en la seguridad de cada perfil de usuario! Cada equipo debe trabajar en conjunto para llegar a un consenso sobre qué permisos permitir y cuáles no.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 4 (3 minutos):</strong> Revisar Diapositiva 26 "Presentar resultados".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora, cada equipo debe elegir un portavoz que presentará sus resultados al resto de la clase. Explicarán por qué decidieron otorgar o restringir ciertos permisos y cómo esto protege la privacidad del perfil de usuario que les fue asignado.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="activity-7" class="activity">
+            <div class="banner" onclick="toggleContent('easter_egg')">
+                <div class="title">🥚 Actividad 7: Easter Egg (4 pasos) ⏰ Tiempo: 3 minutos</div>
+                <div class="subtitle">Realizar la actividad sorpresa del Easter Egg.</div>
+            </div>
+            <div id="easter_egg" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (0.5 minutos):</strong> Revisar Diapositiva 27 " Easter Egg".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora es el momento de ver quién ha estado prestando atención. La siguiente diapositiva tiene una pregunta sobre algo que discutimos hoy. Voy a premiar con Mon-e a los tres primeros que levanten la mano y den la respuesta correcta. ¡Recuerden no gritar la respuesta! ¿Listos?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (0.5 minutos):</strong> Revisar Diapositiva 28 "Pregunta del Easter Egg".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Les diré una oración y ustedes deberán decirme si es falso o verdadero: "Revisar regularmente los permisos de aplicaciones es innecesario si usas un dispositivo seguro". Recuerden levantar la mano si saben la respuesta, no la digan en voz alta.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (1 minuto):</strong> Observar a los estudiantes y seleccionar 3 para que den su respuesta.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Muy bien, uno a uno vengan a decirme la respuesta al oído... ¡Correcto! ¡Felicidades a los ganadores!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 4 (1 minuto):</strong> Revisar dispositiva 29 "Respuesta correcta".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> "FALSO" La oración es falsa, ya que la seguridad no depende del dispositivo sino de las configuraciones y permisos que se le den</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="activity-8" class="activity">
+            <div class="banner" onclick="toggleContent('honor_dojo')">
+                <div class="title">🎖️ Actividad 8: Honor de Dojo (3 pasos) ⏰ Tiempo: 2.5 minutos</div>
+                <div class="subtitle">Cerrar la clase y reconocer los logros de los estudiantes.</div>
+            </div>
+            <div id="honor_dojo" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (0.5 minutos):</strong> Revisar diapositiva 30 "Objetivos alcanzados"</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (1 minuto):</strong> "Reconocimiento".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Genios, hoy varios de ustedes hicieron un trabajo excepcional al analizar y configurar los permisos de aplicaciones para proteger la privacidad de los perfiles de usuario. Vamos a reconocer a [Nombre], [Nombre], y [Nombre] por su excelente desempeño. ¡Gran trabajo!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (1 minuto):</strong> Revisar Diapositiva 31 "Honor de Lab".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Antes de concluir, es importante honrar el espacio en el que trabajamos. Vamos a recoger los materiales, asegurarnos de que todo esté en su lugar, y dejar la clase lista para la próxima misión. ¡Nos vemos en la siguiente aventura, Genios!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+
+function updateContent() {
+    var time = document.getElementById("class-time").value;
+    document.getElementById("selected-time").innerText = "Tiempo efectivo de clase: " + time + " minutos";
+
+    var brainGymStep3 = document.getElementById("brain-gym-step3");
+    var activity4 = document.getElementById("activity-4");
+    var brainGymTitle = document.querySelector("#activity-3 .banner .title");
+
+    if (time === "45") {
+        brainGymStep3.querySelector("strong").innerText = "PASO 3 (15 minutos):";
+        brainGymStep3.querySelector("td:last-child").innerHTML = "<strong>DIÁLOGO SUGERIDO:</strong> Ahora sí, abran su navegador y vayan al sitio que aparece en pantalla para acceder a los recursos de la clase. Vamos a realizar la Lección 2: Quest, Challenge y Misión. Para realizar esta actividad tendremos un tiempo de 15 minutos.";
+        brainGymTitle.innerHTML = "🧠 Actividad 3: Brain Gym (5 pasos) ⏰ Tiempo: 20.5 minutos";
+        activity4.style.display = "block";
+    } else if (time === "40") {
+        brainGymStep3.querySelector("strong").innerText = "PASO 3 (15 minutos):";
+        brainGymStep3.querySelector("td:last-child").innerHTML = "<strong>DIÁLOGO SUGERIDO:</strong> Ahora sí, abran su navegador y vayan al sitio que aparece en pantalla para acceder a los recursos de la clase. Vamos a realizar la Lección 2: Quest, Challenge y Misión. Para realizar esta actividad tendremos un tiempo de 15 minutos.";
+        brainGymTitle.innerHTML = "🧠 Actividad 3: Brain Gym (5 pasos) ⏰ Tiempo: 20.5 minutos";
+        activity4.style.display = "none";
+    } else {
+        brainGymStep3.querySelector("strong").innerText = "PASO 3 (20 minutos):";
+        brainGymStep3.querySelector("td:last-child").innerHTML = "<strong>DIÁLOGO SUGERIDO:</strong> Ahora sí, abran su navegador y vayan al sitio que aparece en pantalla para acceder a los recursos de la clase. Vamos a realizar la Lección 2: Quest, Challenge y Misión. Para realizar esta actividad tendremos un tiempo de 20 minutos.";
+        brainGymTitle.innerHTML = "🧠 Actividad 3: Brain Gym (5 pasos) ⏰ Tiempo: 25.5 minutos";
+        activity4.style.display = "block";
+    }
+}
+    </script>
+</body>
+</html>
